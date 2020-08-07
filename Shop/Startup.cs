@@ -54,7 +54,13 @@ namespace Shop
             app.UseStaticFiles();               //Отображение CSS - файлов, картинок и.т.д.
             app.UseSession();
 
-            app.UseMvcWithDefaultRoute();       // Вызывает еогнтроллер по кмолчанию...
+            //app.UseMvcWithDefaultRoute();       // Вызывает еогнтроллер по кмолчанию...
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(name: "default", template: "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute(name: "categoryFilter", template: "Car/{action}/{category?}", defaults: new { Controller = "Car", action = "List" });
+            });
 
             
             using (var scope = app.ApplicationServices.CreateScope())
