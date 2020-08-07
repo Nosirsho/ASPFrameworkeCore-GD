@@ -13,6 +13,7 @@ using Shop.Data;
 using Shop.Data.interfaces;
 using Shop.mocks;
 using Shop.Data.Repository;
+using Shop.Data.Models;
 
 namespace Shop
 {
@@ -34,7 +35,14 @@ namespace Shop
             services.AddDbContext<AppDBContent>(options => options.UseSqlServer(_confString.GetConnectionString("DefaultConnection")));
             services.AddTransient<IAllCars, CarRepository>();
             services.AddTransient<ICarsCategory, CategoryRepository>();
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped(sp => ShopCart.GetCart(sp)); // Для того чтобы для двух разных польз создавались отдельныйе корзины
+
             services.AddMvc();
+            services.AddMemoryCache();
+            services.AddSession();
+
             services.AddControllers(options => options.EnableEndpointRouting = false);
         }
 
@@ -44,6 +52,8 @@ namespace Shop
             app.UseDeveloperExceptionPage();    //Отоброзить страницу с ошибками
             app.UseStatusCodePages();           //Отображает коды страниц Н-р: 200б 404
             app.UseStaticFiles();               //Отображение CSS - файлов, картинок и.т.д.
+            app.UseSession();
+
             app.UseMvcWithDefaultRoute();       // Вызывает еогнтроллер по кмолчанию...
 
             
