@@ -149,3 +149,4 @@ C:\Users\KholmamadovN\source\repos\Shop\obj\Debug\netcoreapp3.1\Razor\Views\Shar
 C:\Users\KholmamadovN\source\repos\Shop\obj\Debug\netcoreapp3.1\Shop.csproj.CoreCompileInputs.cache
 C:\Users\KholmamadovN\source\repos\Shop\obj\Debug\netcoreapp3.1\Shop.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\KholmamadovN\source\repos\Shop\obj\Debug\netcoreapp3.1\Razor\Views\ShopCart\Index.cshtml.g.cs
+C:\Users\KholmamadovN\source\repos\Shop\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
