@@ -150,3 +150,5 @@ C:\Users\KholmamadovN\source\repos\Shop\obj\Debug\netcoreapp3.1\Shop.csproj.Core
 C:\Users\KholmamadovN\source\repos\Shop\obj\Debug\netcoreapp3.1\Shop.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\KholmamadovN\source\repos\Shop\obj\Debug\netcoreapp3.1\Razor\Views\ShopCart\Index.cshtml.g.cs
 C:\Users\KholmamadovN\source\repos\Shop\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\KholmamadovN\source\repos\Shop\obj\Debug\netcoreapp3.1\Razor\Views\Order\Checkout.cshtml.g.cs
+C:\Users\KholmamadovN\source\repos\Shop\obj\Debug\netcoreapp3.1\Razor\Views\Order\Complete.cshtml.g.cs
